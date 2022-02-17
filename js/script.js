@@ -1,3 +1,4 @@
+// calculate press
 document.getElementById('calculate-button').addEventListener('click', function () {
 
     calculateButton();
@@ -5,7 +6,7 @@ document.getElementById('calculate-button').addEventListener('click', function (
 })
 
 
-
+// Calculate button calculation
 function calculateButton() {
     let food = document.getElementById('food');
     let foodValue = food.value;
@@ -20,11 +21,12 @@ function calculateButton() {
         const onlyPositiveNumber = document.getElementById('only-positive');
         onlyPositiveNumber.style.display = 'block'
     }
-    else if (typeof (foodValue) == 'string' || typeof (rentValue) == 'string' || typeof (cloth) == 'string') {
+
+    else if (isNaN(foodValue) || isNaN(rentValue)) {
         const nanMessage = document.getElementById('not-a-number');
-        nanMessage.style.display = 'block'
+        return nanMessage.style.display = 'block'
     }
-    else {
+    else if ((foodValue > 0 || rentValue > 0 || clothValue > 0)) {
         let sum = parseFloat(foodValue) + parseFloat(rentValue) + parseFloat(clothValue);
 
         let totalExpenses = document.getElementById('total-expenses')
@@ -43,7 +45,10 @@ function calculateButton() {
     // cloth.value = '';
 }
 
-function errorHandle() {
+// save function calculation
+function saveButton() {
 
+    let income = document.getElementById('income');
+    let incomeValue = income.value;
 }
 
