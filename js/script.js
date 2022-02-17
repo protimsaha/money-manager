@@ -34,9 +34,18 @@ function calculateButton() {
 
         let income = document.getElementById('income');
         let incomeValue = income.value;
+
         let newBalance = parseFloat(incomeValue) - sum;
         let balance = document.getElementById('balance');
         balance.innerText = newBalance;
+
+        if (sum > incomeValue) {
+
+            const moreThanIncome = document.getElementById('more-than-income');
+            moreThanIncome.style.display = 'block'
+            // totalExpenses.innerText = 00;
+            balance.innerText = 00;
+        }
     }
 
 }

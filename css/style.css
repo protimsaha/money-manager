@@ -38,6 +38,7 @@
     color: white;
     background-color: violet;
     border: 1px brown solid;
+    border-radius:10px;
     padding: 10px 30px;
     display: none;
 }
@@ -47,6 +48,7 @@
     color: white;
     background-color: red;
     border: 1px brown solid;
+    border-radius:10px;
     padding: 10px 30px;
     display: none;
 }
@@ -56,6 +58,17 @@
     color: white;
     background-color: orange;
     border: 1px brown solid;
+    border-radius:10px;
+    padding: 10px 30px;
+    display: none;
+}
+#more-than-income{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    background-color: rgba(52, 33, 193, 0.857);
+    border: 1px brown solid;
+    border-radius:10px;
     padding: 10px 30px;
     display: none;
 }
