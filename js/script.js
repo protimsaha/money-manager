@@ -8,6 +8,8 @@ document.getElementById('calculate-button').addEventListener('click', function (
 
 // Calculate button calculation
 function calculateButton() {
+
+    // variables
     let food = document.getElementById('food');
     let foodValue = food.value;
 
@@ -17,38 +19,44 @@ function calculateButton() {
     let cloth = document.getElementById('cloth');
     let clothValue = cloth.value;
 
-    if (foodValue < 0 || rentValue < 0 || clothValue < 0) {
+    let income = document.getElementById('income');
+    let incomeValue = income.value;
+
+    // Error message for negative input value
+    if (foodValue < 0 || rentValue < 0 || clothValue < 0 || incomeValue < 0) {
         const onlyPositiveNumber = document.getElementById('only-positive');
         onlyPositiveNumber.style.display = 'block'
     }
 
-    else if (isNaN(foodValue) || isNaN(rentValue)) {
+    // Error message for string input
+    else if (isNaN(foodValue) || isNaN(rentValue) || isNaN(clothValue) || isNaN(incomeValue)) {
         const nanMessage = document.getElementById('not-a-number');
         nanMessage.style.display = 'block'
     }
+
+    // Calculate Sum and update balance
     else if ((foodValue > 0 || rentValue > 0 || clothValue > 0)) {
         let sum = parseFloat(foodValue) + parseFloat(rentValue) + parseFloat(clothValue);
 
+        // total expenses calculate
         let totalExpenses = document.getElementById('total-expenses')
         totalExpenses.innerText = sum;
 
-        let income = document.getElementById('income');
-        let incomeValue = income.value;
-
+        // balance calculate
         let newBalance = parseFloat(incomeValue) - sum;
         let balance = document.getElementById('balance');
         balance.innerText = newBalance;
 
+        // Error message for cost more than money
         if (sum > incomeValue) {
 
             const moreThanIncome = document.getElementById('more-than-income');
             moreThanIncome.style.display = 'block'
-            // totalExpenses.innerText = 00;
             balance.innerText = 00;
         }
     }
-
 }
+
 
 // save function calculation
 function saveButton() {
@@ -72,14 +80,17 @@ function saveButton() {
     remainingBalance()
 }
 
+
 function remainingBalance() {
 
+    // calculation remain and update balance
     let balance = document.getElementById('balance').innerText;
 
     let savingAmount = document.getElementById('save-amount').innerText;
 
     let remainingBalance = parseFloat(balance) - parseFloat(savingAmount);
 
+    // remain error message
     if (remainingBalance < 0) {
         const remianMessage = document.getElementById('remain-balance');
         remianMessage.style.display = 'block'

@@ -1,10 +1,10 @@
-/* textarea value */
+/* textarea style */
 .textarea-value{
     text-align: center;
     font-weight: 600;
 }
 
-/* calculate  button*/
+/* calculate  button style*/
 #calculate-button{
     text-decoration: none;
     padding: 10px 30px;
@@ -15,7 +15,7 @@
     margin-left: 150px;
     margin-top: 30px;
 }
-/* save button */
+/* save button style*/
 #save-button{
     text-decoration: none;
     padding: 10px 10px;
@@ -32,6 +32,8 @@
     margin: 0% auto;
     margin-top: 50px;
 }
+
+/* negative value error message */
 #only-positive{
     font-size: 30px;
     font-weight: 700;
@@ -42,6 +44,8 @@
     padding: 10px 30px;
     display: none;
 }
+
+/* string error message */
 #not-a-number{
     font-size: 30px;
     font-weight: 700;
@@ -52,6 +56,8 @@
     padding: 10px 30px;
     display: none;
 }
+
+/* remain balance error message */
 #remain-balance{
     font-size: 30px;
     font-weight: 700;
@@ -62,6 +68,8 @@
     padding: 10px 30px;
     display: none;
 }
+
+/* more than income error message */
 #more-than-income{
     font-size: 30px;
     font-weight: 700;
