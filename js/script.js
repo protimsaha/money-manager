@@ -39,16 +39,27 @@ function calculateButton() {
         balance.innerText = newBalance;
     }
 
-    // income.value = '';
-    // food.value = '';
-    // rent.value = '';
-    // cloth.value = '';
+
+    food.value = '';
+    rent.value = '';
+    cloth.value = '';
 }
 
 // save function calculation
 function saveButton() {
 
-    let income = document.getElementById('income');
+    const income = document.getElementById('income');
     let incomeValue = income.value;
+
+    const save = document.getElementById('save');
+    let saveValue = save.value;
+
+    let saveAmount = incomeValue * (saveValue / 100);
+
+    let savingOutput = document.getElementById('save-amount');
+    let savingOutputValue = savingOutput.innerText;
+
+    savingOutput.innerText = saveAmount
+
 }
 
