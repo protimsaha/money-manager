@@ -24,3 +24,29 @@
     background-color: rgba(76, 192, 221, 0.89);
     font-size: 20px;
 }
+
+/* notify section */
+.notify-section{
+    align-items: center;
+    width: 100%;
+    margin: 0% auto;
+    margin-top: 50px;
+}
+#only-positive{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    background-color: violet;
+    border: 1px brown solid;
+    padding: 10px 30px;
+    display: none;
+}
+#not-a-number{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    background-color: red;
+    border: 1px brown solid;
+    padding: 10px 30px;
+    display: none;
+}
